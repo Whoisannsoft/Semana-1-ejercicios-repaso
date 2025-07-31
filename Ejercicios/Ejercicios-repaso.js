@@ -158,19 +158,62 @@ const productos_ejercicio4 = [
         precio: 1500
     }
 ]
-
 const ordenar = (productos) => {
+    let productosOrdenados = productos; 
 
-    let productos_ordenados = []
-
-    for (let index = 0; index < productos.length; index++) {
-        const element = array[index];
-            for (let index = 1; index < array.length; index++) {
-                const element = array[index];
-                
+    for (let i = 0; i < productosOrdenados.length; i++) {
+        for (let j = 0; j < productosOrdenados.length - 1; j++) {
+            if (productosOrdenados[j].precio > productosOrdenados[j + 1].precio) {
+    
+                let temp = productosOrdenados[j];
+                productosOrdenados[j] = productosOrdenados[j + 1];
+                productosOrdenados[j + 1] = temp;
             }
+        }
     }
 
+    return productosOrdenados;
+};
 
-    
-}   
+console.log(ordenar(productos_ejercicio4));
+
+console.log(ordenar(productos_ejercicio4));
+
+
+//Reto de combinar propiedades de objetos:
+
+//Crea una función que tome dos arrays de objetos, donde cada objeto representa una persona con propiedades "nombre" y "edad". La función debe devolver un nuevo array combinando las propiedades de ambas personas.
+
+
+const persona_1 = [
+    {
+        nombre: "Sofia",
+        edad: 20
+    }
+]
+
+const persona_2 = [
+    {
+        nombre: "Ari",
+        edad: 19
+    }
+]
+
+
+
+const combinarPersonas = (personas1, personas2) => {
+    const p1 = personas1[0]; 
+    const p2 = personas2[0];
+
+    const combinado = {
+        nombre1: p1.nombre,
+        edad1: p1.edad,
+        nombre2: p2.nombre,
+        edad2: p2.edad
+    };
+
+    return [combinado];
+
+};
+
+console.log(combinarPersonas(persona_1, persona_2));
