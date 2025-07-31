@@ -127,3 +127,50 @@ console.log (guardar_objeto);
 //Crea una función que tome un array de objetos, donde cada objeto representa un producto con propiedades "nombre" y "precio", y devuelva un nuevo array ordenado por el precio de menor a mayor.
 
 
+const productos_ejercicio4 = [
+    {
+        nombre: "Peras" ,
+        precio: 1000
+    },
+
+    {
+        nombre: "Carne",
+        precio: 15000
+    },
+
+    {
+        nombre: "Gomitas",
+        precio: 4000
+    },
+
+    {
+        nombre: "Maruchan",
+        precio: 6000
+    },
+
+    {
+        nombre: "Barrilete",
+        precio: 800
+    },
+
+    {
+        nombre: "Platano",
+        precio: 1500
+    }
+]
+
+const ordenar = (productos) => {
+
+    let productos_ordenados = []
+
+    for (let index = 0; index < productos.length; index++) {
+        const element = array[index];
+            for (let index = 1; index < array.length; index++) {
+                const element = array[index];
+                
+            }
+    }
+
+
+    
+}   
